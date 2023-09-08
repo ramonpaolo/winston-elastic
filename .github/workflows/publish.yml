@@ -1,0 +1,44 @@
+name: Publish on NPM
+
+on: 
+  push: 
+    tags: 
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  publish:
+    cancel-timeout-minutes: 1
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions:
+        write
+      contents:
+        write
+
+    steps:
+      - name: Clone Code
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJs 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Libs
+        run: npm i
+
+      - name: Transpile TypeScript to JavaScript
+        run: npm run build
+
+      - name: Bump Version of package.json
+        uses: ramonpaolo/bump-version@v2.3.1
+        with:
+          tag: ${{ github.ref_name }}
+          commit: false
+
+      - name: Publish on NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

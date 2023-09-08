@@ -1,4 +1,4 @@
-# winston-elastic
+# elasticsearch-transport
 
 A ElasticSearch transport for [winston][0].
 
@@ -10,7 +10,7 @@ A small library to enable send logs to elasticsearch to analyze logs and build d
 // recommended because have support to types
 import winston from 'winston'
 
-import TransportElastic from 'winston-elastic'
+import TransportElastic from 'elasticsearch-transport'
 
 const logger = winston.createLogger({
   format: winston.format.combine(winston.format.timestamp(), winston.format.json(), winston.format.prettyPrint()),
@@ -38,7 +38,7 @@ logger.info('saving log in elasticsearch!!');
 // not recommended because don't have support to types
 import winston from 'winston'
 
-import 'winston-elastic' // Only requiring `winston-elastic` will expose winston.transports.Elastic`
+import 'elasticsearch-transport' // Only requiring `elasticsearch-transport` will expose winston.transports.Elastic`
 
 const logger = winston.createLogger({
   format: winston.format.combine(winston.format.timestamp(), winston.format.json(), winston.format.prettyPrint()),
@@ -72,12 +72,12 @@ The Elastic transport takes the following options. All options is required:
 
 **NPM**
 ```bash
-$ npm install winston winston-elastic
+$ npm install winston elasticsearch-transport
 ```
 
 **Yarn**
 ```bash
-$ yarn add winston winston-elastic
+$ yarn add winston elasticsearch-transport
 ```
 
 ### Made by Ramon Paolo Maram &#10084;

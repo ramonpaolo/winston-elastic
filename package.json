@@ -1,5 +1,5 @@
 {
-  "name": "winston-elastic",
+  "name": "elasticsearch-transport",
   "version": "0.0.1",
   "description": "Winston tranport to save logs in elasticsearch",
   "main": "dist/index.js",
