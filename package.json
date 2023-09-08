@@ -1,0 +1,33 @@
+{
+  "name": "winston-elastic",
+  "version": "0.0.1",
+  "description": "Winston tranport to save logs in elasticsearch",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "dist/types",
+  "repository": "https://github.com/ramonpaolo/winston-elastic",
+  "engines": {
+    "node": "18.17.1"
+  },
+  "readme": "https://github.com/ramonpaolo/winston-elastic#readme",
+  "bugs": {
+    "url": "https://github.com/ramonpaolo/winston-elastic/issue"
+  },
+  "author": "Ramon Paolo Maram",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@elastic/elasticsearch": "~8.9.0",
+    "winston": "~3.10.0",
+    "winston-transport": "~4.5.0"
+  },
+  "devDependencies": {
+    "@types/elasticsearch": "~5.0.40",
+    "typescript": "~5.2.2"
+  }
+}
