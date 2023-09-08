@@ -21,6 +21,19 @@
   "author": "Ramon Paolo Maram",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "transport-winston",
+    "winston",
+    "elasticsearch",
+    "elastic",
+    "types",
+    "typescript",
+    "log",
+    "logging",
+    "logger",
+    "analyze",
+    "tools"
+  ],
   "dependencies": {
     "@elastic/elasticsearch": "~8.9.0",
     "winston": "~3.10.0",
