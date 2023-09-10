@@ -1,10 +1,10 @@
-import { ClientOptions } from "@elastic/elasticsearch"
+import { type ClientOptions } from '@elastic/elasticsearch'
 
 interface IOptions {
-  elasticClient: ClientOptions;
-  silent: boolean;
+  elasticClient: ClientOptions
+  silent: boolean
 }
 
-export {
-  IOptions,
+export type {
+  IOptions
 }
