@@ -2,8 +2,6 @@ name: Run Linter and Tests
 
 on: 
   push:
-    branches: 
-      - '*'
 
 jobs:
   linter:
