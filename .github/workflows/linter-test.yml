@@ -1,0 +1,27 @@
+name: Run Linter and Tests
+
+on: 
+  push:
+    branches: 
+      - '*'
+
+jobs:
+  linter:
+    cancel-timeout-minutes: 1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Code
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJs 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Libs
+        run: npm i
+
+      - name: Execute Linter
+        run: npm run linter
