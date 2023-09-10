@@ -2,8 +2,13 @@ name: Run Linter and Tests
 
 on: 
   push:
-    tags-ignore: 
-      - '*'
+    branches:
+      - 'main'
+      - 'feat/**'
+      - 'fix/**'
+      - 'ci/**'
+      - 'cd/**'
+      - 'chore/**'
 
 jobs:
   linter:
