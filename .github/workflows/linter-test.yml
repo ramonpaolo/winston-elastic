@@ -2,8 +2,13 @@ name: Run Linter and Tests
 
 on: 
   push:
-    branches: 
-      - '*'
+    branches:
+      - 'main'
+      - 'feat/**'
+      - 'fix/**'
+      - 'ci/**'
+      - 'cd/**'
+      - 'chore/**'
 
 jobs:
   linter:
