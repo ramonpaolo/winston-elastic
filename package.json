@@ -22,9 +22,6 @@
   ],
   "types": "dist/types",
   "repository": "https://github.com/ramonpaolo/winston-elastic",
-  "engines": {
-    "node": "18.17.1"
-  },
   "readme": "https://github.com/ramonpaolo/winston-elastic#readme",
   "bugs": {
     "url": "https://github.com/ramonpaolo/winston-elastic/issue"
